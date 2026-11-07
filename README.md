@@ -26,7 +26,7 @@ Requisitos: Node.js compatible con Nuxt 4 y acceso a una instancia CometCMS.
 ```powershell
 npm install
 Copy-Item .env.example .env
-# Completar NUXT_COMET_API_TOKEN en .env sin compartirlo
+# Completar NUXT_COMET_API_TOKEN en .env
 npm run dev
 ```
 
@@ -36,12 +36,9 @@ Abrí `http://localhost:3000`. La portada muestra solamente la navegación y el 
 
 Conectá el repositorio al sitio Netlify `cometcms`, rama `main`. Configuración incluida en `netlify.toml`: `npm run build`, directorio `dist`, con Nitro SSR para ejecutar el proxy.
 
-En **Netlify → Site configuration → Environment variables**, configurá estos valores privados para Build y Functions:
+En **Netlify → Site configuration → Environment variables**, configurar valor privado para Build y Functions:
 
 | Variable | Valor |
 |---|---|
-| `NUXT_COMET_URL` | URL base de CometCMS con acceso API desde servidores |
-| `NUXT_COMET_WORKSPACE` | Workspace que contiene tus colecciones (`fifa-world-cup` o `default`, según tu configuración real) |
 | `NUXT_COMET_API_TOKEN` | Token privado con permiso Content / Read |
 
-No subir el archivo `.env` ni configurar redirecciones SPA que sustituyan las rutas `/api/`.
