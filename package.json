@@ -1,0 +1,17 @@
+{
+  "name": "cms-headless",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=.env ./node_modules/nuxt/bin/nuxt.mjs dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "4.5.2",
+    "vue": "3.5.41",
+    "vue-router": "5.2.0"
+  }
+}
